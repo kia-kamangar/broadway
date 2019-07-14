@@ -1,7 +1,5 @@
-<div class="col-md-8 col-md-offset-2">
-	<% @plays.each do |p| %>
-		<h2><%=link_to p.title, play_path(p) %></h2>
-	<% end %>
+<% @plays.each do |p| %>
+	<h2><%=link_to p.title, play_path(p) %></h2>
+<% end %>
 
-	<%= link_to "Add Play", new_play_path %>
-</div>
+<%= link_to "Add Play", new_play_path %>
