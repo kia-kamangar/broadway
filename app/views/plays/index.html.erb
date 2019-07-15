@@ -1,3 +1,9 @@
-<% @plays.each do |p| %>
-	<h2><%=link_to p.title, play_path(p) %></h2>
+<h1 class="current-category"><%= params[:cat] %></h1>
+
+<% if @plays.count == 0 %>
+	<h3>There are no plays in this category</h3>
+<% else %>
+	<% @plays.each do |p| %>
+		<h2><%=link_to p.title, play_path(p) %></h2>
+	<% end %>
 <% end %>
